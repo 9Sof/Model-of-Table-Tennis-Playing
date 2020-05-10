@@ -3,12 +3,14 @@ import imutils
 import time
 import numpy as np
 
+
 #CreateBox
 def nothing(x):
     pass
+
 cv2.namedWindow("Set-Ball") #H สี, S ความอิ่มตัวของสี, V ความเข้มแสง
-cv2.createTrackbar("L - H", "Set-Ball", 10, 179, nothing)
-cv2.createTrackbar("L - S", "Set-Ball", 160, 255, nothing)
+cv2.createTrackbar("L - H", "Set-Ball", 15, 179, nothing)
+cv2.createTrackbar("L - S", "Set-Ball", 200, 255, nothing)
 cv2.createTrackbar("L - V", "Set-Ball", 120, 255, nothing)
 cv2.createTrackbar("U - H", "Set-Ball", 30, 179, nothing)
 cv2.createTrackbar("U - S", "Set-Ball", 255, 255, nothing)
@@ -93,6 +95,7 @@ while True:
                     if center[0] > 100 and center[0] < 540 and center[1] < 380: 
                        break
                     print('j after :',j)
+
                 else:
                     if center[0] < 100: 
                         scoreA += 1
@@ -108,7 +111,6 @@ while True:
                         scoreB += 1
                     elif center[0] > 340 and center[1] > 380: 
                         scoreB += 1
-
         else:
             scoreA = 0
             scoreB = 0  
