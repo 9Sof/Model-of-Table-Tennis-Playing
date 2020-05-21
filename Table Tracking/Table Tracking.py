@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import imutils
 
+
 cap = cv2.VideoCapture(0)
 
 while True:

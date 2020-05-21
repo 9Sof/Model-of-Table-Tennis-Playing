@@ -2,6 +2,7 @@ import cv2 as cv
 import numpy as np
 import argparse
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Path to image or video. Skip to capture frames from camera')
 parser.add_argument('--thr', default=0.2, type=float, help='Threshold value for pose parts heat map')
